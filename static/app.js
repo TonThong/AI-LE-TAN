@@ -246,7 +246,7 @@ async function sendAudioToBackend(audioBlob) {
   });
 
   if (!response.ok) {
-    throw new Error("Gửi audio thất bại");
+    throw new Error('Failed to send audio to backend: ' + response.statusText);
   }
 
   const result = await response.json();

@@ -5,10 +5,13 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 import tempfile
 
+from app.services.voice import VoiceService
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_DIR = BASE_DIR / "static"
 
 app = FastAPI(title="AI Lễ Tân")
+voice_service = VoiceService()
 
 app.mount(
     "/static",
@@ -37,13 +40,9 @@ async def transcribe_audio(audio: UploadFile = File(...)):
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
             temp_file.write(audio_bytes)
-            temp_path = temp_file.name
+            temp_path = Path(temp_file.name)
 
-        # Gọi service STT của bạn ở đây
-        # Ví dụ:
-        # text = voice_service.speech_to_text(audio_bytes, audio.filename, audio.content_type)
-
-        text = "Kết quả speech to text ở đây"
+        text = await voice_service.speech_to_text(temp_path)
 
         return {
             "text": text

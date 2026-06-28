@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Lễ Tân</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="Kiểm tra micro">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">AI Lễ Tân</p>
+            <h1>Uyển Vị Coffee</h1>
+          </div>
+          <div id="micBadge" class="status-badge" data-state="idle">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="micStatus">Chưa cấp quyền micro</span>
+          </div>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite">
+        <div>ditconmemay</div>
+        </div>
+
+        <footer class="session-actions">
+          <button id="startButton" class="primary-button" type="button">
+            Bắt đầu
+          </button>
+          <button id="endButton" class="secondary-button" type="button" disabled>
+            Kết thúc
+          </button>
+        </footer>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

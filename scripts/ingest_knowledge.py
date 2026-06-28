@@ -1,0 +1,1 @@
+"""Knowledge ingestion script template."""

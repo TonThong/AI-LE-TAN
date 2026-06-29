@@ -2,3 +2,6 @@ fastapi
 uvicorn[standard]
 python-multipart
 faster-whisper
+httpx
+ollama
+chromadb

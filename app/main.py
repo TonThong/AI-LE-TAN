@@ -6,12 +6,14 @@ from fastapi.staticfiles import StaticFiles
 import tempfile
 
 from app.services.voice import VoiceService
+from app.services.qwen import QwenService
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 STATIC_DIR = BASE_DIR / "static"
 
 app = FastAPI(title="AI Lễ Tân")
 voice_service = VoiceService()
+qwen_ai = QwenService()
 
 app.mount(
     "/static",
@@ -43,9 +45,10 @@ async def transcribe_audio(audio: UploadFile = File(...)):
             temp_path = Path(temp_file.name)
 
         text = await voice_service.speech_to_text(temp_path)
-
+        qwen_response = await qwen_ai.generate_response(text)
         return {
-            "text": text
+            "text": text,
+            "qwen_response": qwen_response
         }
 
     except Exception as e:

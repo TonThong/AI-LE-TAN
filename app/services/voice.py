@@ -18,7 +18,7 @@ class VoiceService:
                 vad_filter=True,
             )
             text = " ".join(segment.text.strip() for segment in segments)
-            return f"Đã nhận file âm thanh: {text}"
+            return text
             
         except Exception as e:
             traceback.print_exc()

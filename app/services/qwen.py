@@ -8,7 +8,6 @@ class QwenService:
     
     async def generate_response(self, 
         user_text: str,
-        contexts: list[dict],
     ) -> str:
         try:
             response = await self.client.chat(

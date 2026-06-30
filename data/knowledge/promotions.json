@@ -1,0 +1,11 @@
+[
+  {
+    "id": "happy-hour",
+    "name": "Happy Hour",
+    "description": "Giảm 20% cho toàn bộ thức uống.",
+    "condition": "Áp dụng từ 14:00 đến 17:00, từ thứ Hai đến thứ Sáu.",
+    "valid_from": "2026-06-01",
+    "valid_to": "2026-07-31",
+    "active": true
+  }
+]

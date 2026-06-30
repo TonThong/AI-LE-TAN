@@ -1,0 +1,426 @@
+[
+  {
+    "id": "tra-quat-nha-dam",
+    "name": "Trà quất nha đam",
+    "category": "Trà lạnh",
+    "price": 29000,
+    "description": "Trà quất kết hợp nha đam, vị chua nhẹ và thanh mát.",
+    "available": true
+  },
+  {
+    "id": "tra-dao-cam-sa",
+    "name": "Trà đào cam sả",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà đào kết hợp cam và sả, hương thơm dịu, vị chua ngọt.",
+    "available": true
+  },
+  {
+    "id": "tra-vai",
+    "name": "Trà vải",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà trái cây vị vải, thơm ngọt và thanh mát.",
+    "available": true
+  },
+  {
+    "id": "tra-dau",
+    "name": "Trà dâu",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà trái cây vị dâu, có vị chua ngọt dễ uống.",
+    "available": true
+  },
+  {
+    "id": "tra-oi-hong",
+    "name": "Trà ổi hồng",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà trái cây vị ổi hồng, hương thơm nhẹ và thanh mát.",
+    "available": true
+  },
+  {
+    "id": "tra-dua-luoi",
+    "name": "Trà dưa lưới",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà trái cây vị dưa lưới, ngọt nhẹ và thơm mát.",
+    "available": true
+  },
+  {
+    "id": "tra-xoai-dua-luoi",
+    "name": "Trà xoài dưa lưới",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà trái cây kết hợp xoài và dưa lưới.",
+    "available": true
+  },
+  {
+    "id": "hibiscus-atiso",
+    "name": "Hibiscus atiso",
+    "category": "Trà lạnh",
+    "price": 39000,
+    "description": "Trà hibiscus kết hợp atiso, vị thanh nhẹ.",
+    "available": true
+  },
+  {
+    "id": "matcha-latte",
+    "name": "Matcha latte",
+    "category": "Matcha",
+    "price": 35000,
+    "description": "Matcha kết hợp sữa, vị béo nhẹ và thơm trà xanh.",
+    "available": true
+  },
+  {
+    "id": "matcha-latte-coconut",
+    "name": "Matcha latte coconut",
+    "category": "Matcha",
+    "price": 39000,
+    "description": "Matcha latte kết hợp vị dừa.",
+    "available": true
+  },
+  {
+    "id": "matcha-kem-trung",
+    "name": "Matcha kem trứng",
+    "category": "Matcha",
+    "price": 39000,
+    "description": "Matcha kết hợp lớp kem trứng béo mịn.",
+    "available": true
+  },
+  {
+    "id": "matcha-latte-kem-muoi",
+    "name": "Matcha latte kem muối",
+    "category": "Matcha",
+    "price": 39000,
+    "description": "Matcha latte kết hợp kem muối béo mặn nhẹ.",
+    "available": true
+  },
+  {
+    "id": "sua-chua-nha-dam",
+    "name": "Sữa chua nha đam",
+    "category": "Sữa chua",
+    "price": 29000,
+    "description": "Sữa chua kết hợp nha đam, vị chua ngọt mát.",
+    "available": true
+  },
+  {
+    "id": "sua-chua-chanh-day",
+    "name": "Sữa chua chanh dây",
+    "category": "Sữa chua",
+    "price": 29000,
+    "description": "Sữa chua kết hợp chanh dây, vị chua thơm.",
+    "available": true
+  },
+  {
+    "id": "sua-chua-xoai",
+    "name": "Sữa chua xoài",
+    "category": "Sữa chua",
+    "price": 29000,
+    "description": "Sữa chua kết hợp xoài, vị ngọt thơm.",
+    "available": true
+  },
+  {
+    "id": "sua-chua-dau",
+    "name": "Sữa chua dâu",
+    "category": "Sữa chua",
+    "price": 29000,
+    "description": "Sữa chua kết hợp dâu, vị chua ngọt dễ uống.",
+    "available": true
+  },
+  {
+    "id": "sua-chua-dao",
+    "name": "Sữa chua đào",
+    "category": "Sữa chua",
+    "price": 29000,
+    "description": "Sữa chua kết hợp đào, vị thơm ngọt.",
+    "available": true
+  },
+  {
+    "id": "yakult-xoai",
+    "name": "Yakult xoài",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị xoài, chua ngọt và dễ uống.",
+    "available": true
+  },
+  {
+    "id": "yakult-dua-luoi",
+    "name": "Yakult dưa lưới",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị dưa lưới thơm mát.",
+    "available": true
+  },
+  {
+    "id": "yakult-oi-hong",
+    "name": "Yakult ổi hồng",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị ổi hồng.",
+    "available": true
+  },
+  {
+    "id": "yakult-dau",
+    "name": "Yakult dâu",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị dâu chua ngọt.",
+    "available": true
+  },
+  {
+    "id": "yakult-dao",
+    "name": "Yakult đào",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị đào thơm nhẹ.",
+    "available": true
+  },
+  {
+    "id": "yakult-vai",
+    "name": "Yakult vải",
+    "category": "Yakult",
+    "price": 34000,
+    "description": "Yakult kết hợp vị vải thanh ngọt.",
+    "available": true
+  },
+  {
+    "id": "ep-cam",
+    "name": "Ép cam",
+    "category": "Nước ép",
+    "price": 25000,
+    "description": "Nước cam ép tươi.",
+    "available": true
+  },
+  {
+    "id": "ep-thom",
+    "name": "Ép thơm",
+    "category": "Nước ép",
+    "price": 29000,
+    "description": "Nước ép thơm tươi, vị chua ngọt.",
+    "available": true
+  },
+  {
+    "id": "ep-dua-hau",
+    "name": "Ép dưa hấu",
+    "category": "Nước ép",
+    "price": 29000,
+    "description": "Nước ép dưa hấu tươi, ngọt mát.",
+    "available": true
+  },
+  {
+    "id": "tra-gung-mat-ong",
+    "name": "Trà gừng mật ong",
+    "category": "Trà nóng",
+    "price": 29000,
+    "description": "Trà nóng kết hợp gừng và mật ong.",
+    "available": true
+  },
+  {
+    "id": "tra-dao-mat-ong",
+    "name": "Trà đào mật ong",
+    "category": "Trà nóng",
+    "price": 39000,
+    "description": "Trà đào nóng kết hợp mật ong.",
+    "available": true
+  },
+  {
+    "id": "tra-atiso",
+    "name": "Trà atiso",
+    "category": "Trà nóng",
+    "price": 39000,
+    "description": "Trà atiso nóng, vị thanh nhẹ.",
+    "available": true
+  },
+  {
+    "id": "nuoc-chanh-mat-ong",
+    "name": "Nước chanh mật ong",
+    "category": "Trà nóng",
+    "price": 29000,
+    "description": "Nước chanh kết hợp mật ong, có thể dùng nóng hoặc ấm.",
+    "available": true
+  },
+  {
+    "id": "tra-dao-tao-do-xi-muoi",
+    "name": "Trà đào táo đỏ xí muội",
+    "category": "Trà nóng",
+    "price": 39000,
+    "description": "Trà đào kết hợp táo đỏ và xí muội.",
+    "available": true
+  },
+  {
+    "id": "sua-nong-da",
+    "name": "Sữa nóng / đá",
+    "category": "Sữa",
+    "price": 29000,
+    "description": "Sữa dùng nóng hoặc đá.",
+    "available": true
+  },
+  {
+    "id": "tra-sua-tran-chau-trang-thai-xanh",
+    "name": "Trà sữa trân châu trắng thái xanh",
+    "category": "Trà sữa",
+    "price": 39000,
+    "description": "Trà sữa thái xanh kết hợp trân châu trắng.",
+    "available": true
+  },
+  {
+    "id": "tra-sua-tran-chau-trang-thai-do",
+    "name": "Trà sữa trân châu trắng thái đỏ",
+    "category": "Trà sữa",
+    "price": 39000,
+    "description": "Trà sữa thái đỏ kết hợp trân châu trắng.",
+    "available": true
+  },
+  {
+    "id": "tra-sua-chom-chom",
+    "name": "Trà sữa chôm chôm",
+    "category": "Trà sữa",
+    "price": 39000,
+    "description": "Trà sữa kết hợp vị chôm chôm.",
+    "available": true
+  },
+  {
+    "id": "tra-sua-o-long-lai-kem-trung",
+    "name": "Trà sữa ô long lài kem trứng",
+    "category": "Trà sữa",
+    "price": 39000,
+    "description": "Trà sữa ô long lài kết hợp kem trứng béo mịn.",
+    "available": true
+  },
+  {
+    "id": "cacao-nong-da",
+    "name": "Cacao nóng / đá",
+    "category": "Cacao",
+    "price": 25000,
+    "description": "Cacao dùng nóng hoặc đá.",
+    "available": true
+  },
+  {
+    "id": "cacao-latte-nong-da",
+    "name": "Cacao latte nóng / đá",
+    "category": "Cacao",
+    "price": 29000,
+    "description": "Cacao latte kết hợp sữa, dùng nóng hoặc đá.",
+    "available": true
+  },
+  {
+    "id": "cacao-kem-muoi-nong-da",
+    "name": "Cacao kem muối nóng / đá",
+    "category": "Cacao",
+    "price": 34000,
+    "description": "Cacao kết hợp kem muối, dùng nóng hoặc đá.",
+    "available": true
+  },
+  {
+    "id": "cacao-kem-trung-nong-da",
+    "name": "Cacao kem trứng nóng / đá",
+    "category": "Cacao",
+    "price": 34000,
+    "description": "Cacao kết hợp kem trứng, dùng nóng hoặc đá.",
+    "available": true
+  },
+  {
+    "id": "ca-phe-phin-den",
+    "name": "Cà phê phin đen",
+    "category": "Cà phê phin",
+    "price": 18000,
+    "description": "Cà phê phin đen truyền thống.",
+    "available": true
+  },
+  {
+    "id": "ca-phe-phin-sua",
+    "name": "Cà phê phin sữa",
+    "category": "Cà phê phin",
+    "price": 20000,
+    "description": "Cà phê phin kết hợp sữa đặc.",
+    "available": true
+  },
+  {
+    "id": "ca-phe-muoi",
+    "name": "Cà phê muối",
+    "category": "Cà phê phin",
+    "price": 25000,
+    "description": "Cà phê kết hợp kem muối béo mặn nhẹ.",
+    "available": true
+  },
+  {
+    "id": "ca-phe-kem-trung",
+    "name": "Cà phê kem trứng",
+    "category": "Cà phê phin",
+    "price": 29000,
+    "description": "Cà phê kết hợp lớp kem trứng béo mịn.",
+    "available": true
+  },
+  {
+    "id": "bac-xiu-sai-gon",
+    "name": "Bạc xỉu Sài Gòn",
+    "category": "Cà phê phin",
+    "price": 25000,
+    "description": "Bạc xỉu kiểu Sài Gòn, vị sữa béo và cà phê nhẹ.",
+    "available": true
+  },
+  {
+    "id": "bac-xiu-kem-muoi",
+    "name": "Bạc xỉu kem muối",
+    "category": "Cà phê phin",
+    "price": 29000,
+    "description": "Bạc xỉu kết hợp kem muối béo mặn nhẹ.",
+    "available": true
+  },
+  {
+    "id": "sua-tuoi-kem-trung",
+    "name": "Sữa tươi kem trứng",
+    "category": "Cà phê phin",
+    "price": 29000,
+    "description": "Sữa tươi kết hợp lớp kem trứng béo mịn.",
+    "available": true
+  },
+  {
+    "id": "ca-phe-hanh-nhan",
+    "name": "Cà phê hạnh nhân",
+    "category": "Cà phê phin",
+    "price": 29000,
+    "description": "Cà phê kết hợp hương vị hạnh nhân.",
+    "available": true
+  },
+  {
+    "id": "espresso-cafe",
+    "name": "Espresso Cafe",
+    "category": "Cà phê pha máy",
+    "price": 18000,
+    "description": "Cà phê espresso pha máy.",
+    "available": true
+  },
+  {
+    "id": "espresso-cafe-sua",
+    "name": "Espresso Cafe Sữa",
+    "category": "Cà phê pha máy",
+    "price": 20000,
+    "description": "Espresso pha máy kết hợp sữa.",
+    "available": true
+  },
+  {
+    "id": "americano",
+    "name": "Americano",
+    "category": "Cà phê pha máy",
+    "price": 29000,
+    "description": "Cà phê Americano pha máy.",
+    "available": true
+  },
+  {
+    "id": "americano-orange-coffee",
+    "name": "Americano orange coffee",
+    "category": "Cà phê pha máy",
+    "price": 35000,
+    "description": "Americano kết hợp cam, vị cà phê thanh và chua nhẹ.",
+    "available": true
+  },
+  {
+    "id": "latte-coffee",
+    "name": "Latte Coffee",
+    "category": "Cà phê pha máy",
+    "price": 29000,
+    "description": "Cà phê latte pha máy kết hợp sữa.",
+    "available": true
+  }
+]

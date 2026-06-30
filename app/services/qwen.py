@@ -19,6 +19,9 @@ class QwenService:
                     {"role": "user", "content": build_user_prompt(user_text, context)}
                 ],
                 think=False,
+                options={
+                    "num_predict": 90,
+                }
             )
             return response.message.content.strip()
         except httpx.RequestError as e:

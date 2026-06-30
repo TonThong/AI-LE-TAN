@@ -1,7 +1,9 @@
 from pathlib import Path
 
+from io import BytesIO
+from pydantic import BaseModel, Field
 from fastapi import FastAPI, UploadFile, File, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 import tempfile
 
@@ -20,6 +22,9 @@ app.mount(
     StaticFiles(directory=STATIC_DIR),
     name="static",
 )
+
+class SynthesizeRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
 
 @app.get("/")
 async def home():
@@ -46,10 +51,31 @@ async def transcribe_audio(audio: UploadFile = File(...)):
 
         text = await voice_service.speech_to_text(temp_path)
         qwen_response = await orchestrator.process(text)
+
         return {
             "text": text,
             "qwen_response": qwen_response
         }
 
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/voice/synthesize")
+async def synthesize_audio(request: SynthesizeRequest):
+    try:
+        audio_bytes = await voice_service.text_to_speech(request.text)
+
+        if not audio_bytes:
+            raise HTTPException(
+                status_code=500,
+                detail="Không tạo được âm thanh",
+            )
+
+        return StreamingResponse(
+            BytesIO(audio_bytes),
+            media_type="audio/mpeg",
+        )
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

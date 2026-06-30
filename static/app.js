@@ -252,5 +252,54 @@ async function sendAudioToBackend(audioBlob) {
   const result = await response.json();
   console.log("Backend result:", result);
 
+  if (result.qwen_response) {
+    await playSynthesizedSpeech(result.qwen_response);
+  }
   return result;
+}
+
+// Function to play synthesized speech
+let currentAudio = null;
+
+async function playSynthesizedSpeech(text) {
+  if (!text || !text.trim()) {
+    return;
+  }
+
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  const response = await fetch("/api/voice/synthesize", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      text: text
+    })
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`TTS error: ${errorText}`);
+  }
+
+  const audioBlob = await response.blob();
+  const audioUrl = URL.createObjectURL(audioBlob);
+
+  currentAudio = new Audio(audioUrl);
+
+  try {
+    await new Promise((resolve, reject) => {
+      currentAudio.onended = resolve;
+      currentAudio.onerror = reject;
+
+      currentAudio.play().catch(reject);
+    });
+  } finally {
+    URL.revokeObjectURL(audioUrl);
+    currentAudio = null;
+  }
 }

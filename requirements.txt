@@ -5,3 +5,4 @@ faster-whisper
 httpx
 ollama
 chromadb
+edge-tts

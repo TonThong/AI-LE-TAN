@@ -42,7 +42,10 @@ class VoiceService:
                 if chunk["type"] == "audio":
                     audio_data.extend(chunk["data"])
 
+            if not audio_data:
+                raise RuntimeError("Edge TTS không trả về dữ liệu âm thanh")
+
             return bytes(audio_data)
         except Exception as e:
             traceback.print_exc()
-            return f"Error: {str(e)}"  
+            raise RuntimeError(f"Edge TTS thất bại: {e}") from e

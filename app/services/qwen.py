@@ -10,12 +10,14 @@ class QwenService:
     async def generate_response(self, 
         user_text: str,
         context: list[dict],
+        history: list[dict],
     ) -> str:
         try:
             response = await self.client.chat(
                 model=self.model_name,
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
+                    *history,
                     {"role": "user", "content": build_user_prompt(user_text, context)}
                 ],
                 think=False,

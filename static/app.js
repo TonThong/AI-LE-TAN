@@ -43,6 +43,7 @@ checkMicrophonePermission();
 
 // Session state management
 let isSessionRunning = false;
+let conversationHistory = [];
 
 function setSessionRunning(running) {
   isSessionRunning = running;
@@ -82,6 +83,7 @@ let currentStream = null;
 
 startButton.addEventListener("click", async () => {
   try {
+    conversationHistory = [];
     setSessionRunning(true);
     await startRecording();
   } catch (error) {
@@ -239,6 +241,10 @@ endButton.addEventListener("click", async () => {
 async function sendAudioToBackend(audioBlob) {
   const formData = new FormData();
   formData.append("audio", audioBlob, "recording.webm");
+  formData.append(
+    "history",
+    JSON.stringify(conversationHistory)
+  );
 
   const response = await fetch("/api/voice/transcribe", {
     method: "POST",
@@ -250,6 +256,22 @@ async function sendAudioToBackend(audioBlob) {
   }
 
   const result = await response.json();
+  if (result.text && result.qwen_response) {
+    conversationHistory.push(
+      {
+        role: "user",
+        content: result.text,
+      },
+      {
+        role: "assistant",
+        content: result.qwen_response,
+      },
+    );
+  
+    conversationHistory =
+      conversationHistory.slice(-20)
+  }
+
   console.log("Backend result:", result);
 
   if (result.qwen_response) {

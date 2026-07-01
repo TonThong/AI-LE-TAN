@@ -7,7 +7,10 @@ class ConversationOrchestrator:
         self.retriever = CafeRetriever()
         self.qwen = QwenService()
 
-    async def process(self, user_text: str) -> str:
+    async def process(self, 
+        user_text: str,
+        history: list[dict] | None = None,
+    ) -> str:
         contexts = await self.retriever.search(
             query=user_text,
             top_k=4,
@@ -16,4 +19,5 @@ class ConversationOrchestrator:
         return await self.qwen.generate_response(
             user_text=user_text,
             context=contexts,
+            history=history or [],
         )
